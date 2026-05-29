@@ -1,11 +1,18 @@
-# Home Automation App in Flutter
+# Smart Home Automation App with Voice Control Access
 
-This is the companion app to the YouTube video Series "Home Automation App in Flutter", a series of videos in which I built a Home Automation System for my home using Flutter by sending commands to connected start plugs and devices installed around the house.
+A responsive, cross-platform Flutter application built to monitor and control smart home appliances (lights, fans, air conditioners, heaters) on a local network.
 
-We'll go into the products I picked, their specs, how I set them up, and then we'll go into coding a solution in Flutter that I can deploy to multiple devices around the house so they can serve as hubs for managing the devices I want to control in any given room, like turn them on and off, changing the light intensity, etc.
+## Key Features
 
-![App](app_mockups.png)
+* **Customizable IoT Settings**: Configure individual microcontroller IP addresses (ESP32/ESP8266) inside the settings panel dynamically without changing source code.
+* **Integrated Voice Assistant**: Hands-free voice assistant overlay (Siri/Bixby style) to perform navigation actions and toggle smart appliances using natural language.
+* **System-Wide Quick Settings Tile**: Quick Settings Tile integration on Android to trigger voice control instantly from outside the application.
+* **Responsive Layout**: Adapts dynamically between mobile screens (vertical stacked controls) and tablet screens (split view panels).
+* **Crash-Resistant Interface**: Uses dynamic Layout Builders to prevent UI overflows when the software keyboard is active.
 
-Check out the videos [here](https://www.youtube.com/playlist?list=PL8NTBhIXP2gH-Z7pgJ6W3wYodZwe7d6bI).
+## Technical Architecture
 
-![App](main_thumb.png)
+* **Frontend**: Flutter & Dart
+* **State Management**: Riverpod
+* **Networking**: Direct HTTP REST communication with local microcontrollers (ESP32/ESP8266 relays)
+* **Local Storage**: Persistent configurations via SharedPreferences
